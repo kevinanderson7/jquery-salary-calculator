@@ -15,15 +15,25 @@ function addEmployee(event) {
     jobTitle: $('#js-input-jobTitle').val(),
     salary: $('#js-input-salary').val(),
   };
-  $('#js-input-firstName').val('');
-  $('#js-input-lastName').val('');
-  $('#js-input-idNumber').val('');
-  $('#js-input-jobTitle').val('');
-  $('#js-input-salary').val('');
+  if (
+    employee.idNumber == '' ||
+    employee.salary == '' ||
+    employee.firstName == '' ||
+    employee.lastName == '' ||
+    employee.jobTitle == ''
+  ) {
+    alert('Please fill in missing fields');
+  } else {
+    $('#js-input-firstName').val('');
+    $('#js-input-lastName').val('');
+    $('#js-input-idNumber').val('');
+    $('#js-input-jobTitle').val('');
+    $('#js-input-salary').val('');
 
-  employees.push(employee);
-  console.table(employees);
-  render();
+    employees.push(employee);
+    console.table(employees);
+    render();
+  }
 }
 
 function deleteRow() {

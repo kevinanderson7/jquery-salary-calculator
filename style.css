@@ -29,3 +29,7 @@ h2 {
 tr {
   display: table-row;
 }
+
+#totalMonthlyCost {
+  text-align: right;
+}
