@@ -25,3 +25,7 @@ h2 {
 
 .formInputs {
 }
+
+tr {
+  display: table-row;
+}

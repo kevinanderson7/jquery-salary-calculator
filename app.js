@@ -29,13 +29,20 @@ function addEmployee(event) {
 function deleteRow() {
   //console.log('woof');
   $(this).parent().parent().remove();
-  //   let val = $(this).closest('tr');
+  //   let val = $(this).closest('tr').find('.firstName').text();
   //   console.log(val);
-  let index = employees.findIndex(function (item) {
-    // return item.name == val;
+  //   let index = employees.findIndex(function (item) {
+  //     return item.name == val;
+  //   });
+  //   console.log(index);
+  //   employees.splice(index, 1);
+  //   console.log(employees);
+  //   render();
+  let val = $(this).parent().parent().find('.idNumber').text();
+  let index = employees.findIndex(function (employees) {
+    return employees.idNumber == val;
   });
-  console.log(index);
-
+  console.log(val);
   employees.splice(index, 1);
   console.log(employees);
   render();
@@ -60,7 +67,7 @@ function render() {
     <tr>
         <td>${employee.firstName}</td>
         <td>${employee.lastName}</td>
-        <td>${employee.idNumber}</td>
+        <td class="idNumber">${employee.idNumber}</td>
         <td>${employee.jobTitle}</td>
         <td>${employee.salary}</td>
         <td><button class="js-btn-delete btn btn-danger float-right">X</button></td>
