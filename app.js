@@ -45,7 +45,7 @@ function render() {
   let totalMonthlyCost = 0;
 
   for (let employee of employees) {
-    totalMonthlyCost += parseInt(employee.salary);
+    totalMonthlyCost += parseInt(employee.salary) / 12;
     $('#js-table-body').append(`
     <tr>
         <td>${employee.firstName}</td>
