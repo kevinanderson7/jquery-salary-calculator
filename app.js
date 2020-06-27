@@ -23,17 +23,29 @@ function addEmployee(event) {
 
   employees.push(employee);
   console.table(employees);
+  render();
+}
+
+function deleteRow() {
+  //console.log('woof');
+  $(this).parent().parent().remove();
 }
 
 function onReady() {
   console.log('jQuery');
   $('#js-form-addSalary').on('submit', addEmployee);
+  $('#js-table-body').on('click', '.js-btn-delete', deleteRow);
 
   render();
 }
 
 function render() {
+  $('#js-table-body').empty();
+
+  let totalMonthlyCost = 0;
+
   for (let employee of employees) {
+    totalMonthlyCost += parseInt(employee.salary);
     $('#js-table-body').append(`
     <tr>
         <td>${employee.firstName}</td>
@@ -45,4 +57,11 @@ function render() {
     </tr>
 `);
   }
+
+  if (totalMonthlyCost > 20000) {
+    $('#totalMonthlyCostContainer').addClass('redBackground');
+  } else {
+    $('#totalMonthlyCostContainer').removeClass('redBackground');
+  }
+  $('#totalMonthlyCost').text(`Total Monthly Cost: $${totalMonthlyCost}`);
 }

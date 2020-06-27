@@ -12,15 +12,19 @@
     <script src="app.js"></script>
   </head>
   <body>
-    <div>
+    <div class="aboveForm">
+      <h1>Salary Calculator</h1>
+      <h2>Add Employee</h2>
+    </div>
+    <div class="form">
       <form id="js-form-addSalary">
         <input type="text" id="js-input-firstName" placeholder="First Name" />
         <input type="text" id="js-input-lastName" placeholder="Last Name" />
         <input type="text" id="js-input-idNumber" placeholder="ID Number" />
         <input type="text" id="js-input-jobTitle" placeholder="Job Title" />
         <input type="text" id="js-input-salary" placeholder="Salary" />
-        <div>
-          <button id="submitButton">
+        <div class="text-right">
+          <button id="submitButton" class="btn btn-success float-right">
             Submit
           </button>
         </div>
@@ -37,6 +41,9 @@
         </thead>
         <tbody id="js-table-body"></tbody>
       </table>
+      <div id="totalMonthlyCostContainer">
+        <h3 id="totalMonthlyCost">Total Monthly Cost:</h3>
+      </div>
     </div>
   </body>
 </html>
