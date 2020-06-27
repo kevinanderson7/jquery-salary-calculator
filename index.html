@@ -18,11 +18,13 @@
     </div>
     <div class="form">
       <form id="js-form-addSalary">
-        <input type="text" id="js-input-firstName" placeholder="First Name" />
-        <input type="text" id="js-input-lastName" placeholder="Last Name" />
-        <input type="number" id="js-input-idNumber" placeholder="ID Number" />
-        <input type="text" id="js-input-jobTitle" placeholder="Job Title" />
-        <input type="number" id="js-input-salary" placeholder="Salary" />
+        <div class="formInputs">
+          <input type="text" id="js-input-firstName" placeholder="First Name" />
+          <input type="text" id="js-input-lastName" placeholder="Last Name" />
+          <input type="number" id="js-input-idNumber" placeholder="ID Number" />
+          <input type="text" id="js-input-jobTitle" placeholder="Job Title" />
+          <input type="number" id="js-input-salary" placeholder="Salary" />
+        </div>
         <div class="text-right">
           <button id="submitButton" class="btn btn-success float-right">
             Submit
@@ -30,8 +32,8 @@
         </div>
       </form>
       <table class="table">
-        <thead>
-          <tr>
+        <thead class="thead-dark">
+          <tr class="tableCategories">
             <th>First Name</th>
             <th>Last Name</th>
             <th>ID Number</th>

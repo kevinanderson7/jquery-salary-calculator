@@ -29,6 +29,16 @@ function addEmployee(event) {
 function deleteRow() {
   //console.log('woof');
   $(this).parent().parent().remove();
+  //   let val = $(this).closest('tr');
+  //   console.log(val);
+  let index = employees.findIndex(function (item) {
+    // return item.name == val;
+  });
+  console.log(index);
+
+  employees.splice(index, 1);
+  console.log(employees);
+  render();
 }
 
 function onReady() {
