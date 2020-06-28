@@ -1,9 +1,7 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Weekend Challenge 1: jQuery Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+The problem that I was tasked with to solve was to create an application that records employee salaries and adds salaries up to report monthly costs. The way that I was able to do this was to design an application that takes in form inputs provided by the user, creates a new object that contains the information the user provided, and then pushes that object into an array and displays each employee object on the DOM. From there, the total monthly cost is calculated based on the employee's salary. The application also has delete buttons next to each employee row that is created that allows the user to delete the employee from the DOM. Some extra functionality that I added was the ability to delete a particular employee from the array entirely when the respective delete button is pressed. When the employee is deleted, the total monthly cost is automatically recalculated and updated to reflect the number of employees left in the array and displayed on the DOM. Another feature that I added to the application was an alert that pops up and prevents the user from going any further if they try to submit data without first filling in all of the required input fields. This is in order to prevent blank data being entered into the system which could potentially cause issues with the total monthly cost calculation and clutter the application.
